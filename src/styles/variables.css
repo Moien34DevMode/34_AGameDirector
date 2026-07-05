@@ -1,0 +1,124 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   CSS Custom Properties — mirrors src/theme/theme.ts
+   ⚠️  Keep both files in sync. theme.ts is the source of truth.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Background ───────────────────────────────────────────────────────── */
+  --color-bg-primary:   #0a0a0a;
+  --color-bg-secondary: #111111;
+  --color-bg-surface:   #1a1a1a;
+  --color-bg-overlay:   rgba(0, 0, 0, 0.75);
+
+  /* ── Text ─────────────────────────────────────────────────────────────── */
+  --color-text-primary:   #f0f0f0;
+  --color-text-secondary: #a0a0a0;
+  --color-text-accent:    #c8c8c8;
+  --color-text-muted:     #555555;
+
+  /* ── Accent ───────────────────────────────────────────────────────────── */
+  --color-accent-primary:   #e8e8e8;
+  --color-accent-secondary: #888888;
+  --color-accent-highlight: #ffffff;
+
+  /* ── Border ───────────────────────────────────────────────────────────── */
+  --color-border-subtle:  #1c1c1c;
+  --color-border-default: #2a2a2a;
+  --color-border-strong:  #3e3e3e;
+
+  /* ── State ────────────────────────────────────────────────────────────── */
+  --color-state-error:   #ff4d4d;
+  --color-state-warning: #ffb020;
+  --color-state-success: #3ddc84;
+  --color-state-info:    #4d9fff;
+
+  /* ── Spacing ──────────────────────────────────────────────────────────── */
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+
+  /* ── Typography: Font Families ────────────────────────────────────────── */
+  /* Replace with your chosen typefaces */
+  --font-heading: "Inter", system-ui, sans-serif;
+  --font-body:    "Inter", system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", "Fira Code", monospace;
+
+  /* ── Typography: Font Sizes ───────────────────────────────────────────── */
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-md:   1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  2rem;
+  --text-4xl:  2.5rem;
+  --text-5xl:  3.5rem;
+  --text-6xl:  5rem;
+
+  /* ── Typography: Font Weights ─────────────────────────────────────────── */
+  --weight-light:    300;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-black:    900;
+
+  /* ── Typography: Line Heights ─────────────────────────────────────────── */
+  --leading-none:    1;
+  --leading-tight:   1.15;
+  --leading-snug:    1.35;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.8;
+
+  /* ── Typography: Letter Spacing ───────────────────────────────────────── */
+  --tracking-tighter: -0.04em;
+  --tracking-tight:   -0.02em;
+  --tracking-normal:   0em;
+  --tracking-wide:     0.05em;
+  --tracking-wider:    0.1em;
+  --tracking-widest:   0.25em;
+
+  /* ── Border Radii ─────────────────────────────────────────────────────── */
+  --radius-xs:   0.125rem;
+  --radius-sm:   0.25rem;
+  --radius-md:   0.5rem;
+  --radius-lg:   1rem;
+  --radius-xl:   1.5rem;
+  --radius-full: 9999px;
+
+  /* ── Shadows ──────────────────────────────────────────────────────────── */
+  --shadow-xs:   0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-sm:   0 2px 6px rgba(0, 0, 0, 0.45);
+  --shadow-md:   0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg:   0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-xl:   0 16px 64px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 0 24px rgba(255, 255, 255, 0.08);
+
+  /* ── Z-Index ──────────────────────────────────────────────────────────── */
+  --z-base:     0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+  --z-tooltip:  600;
+
+  /* ── Transitions ──────────────────────────────────────────────────────── */
+  --transition-fast:   120ms ease;
+  --transition-normal: 220ms ease;
+  --transition-slow:   380ms ease;
+  --transition-slower: 600ms ease;
+
+  /* ── Layout ───────────────────────────────────────────────────────────── */
+  --max-width-prose:   65ch;
+  --max-width-content: 80rem;
+  --max-width-wide:    100rem;
+}

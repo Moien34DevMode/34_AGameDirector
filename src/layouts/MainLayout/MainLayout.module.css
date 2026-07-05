@@ -1,0 +1,20 @@
+/* MainLayout — root application shell */
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  width: 100%;
+  background-color: var(--color-bg-primary);
+  overflow: hidden;
+}
+
+.main {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* Scenes are positioned absolutely within this container */
+  isolation: isolate;
+}

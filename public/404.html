@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Game Director — Portfolio</title>
+
+    <!--
+      GitHub Pages SPA redirect script.
+      When GitHub Pages serves this 404.html for a deep-link, this script
+      re-encodes the URL as a query string and redirects to index.html.
+      index.html then restores the original path before React Router mounts.
+
+      segmentCount:
+        1  → deploying to a sub-path  (e.g. username.github.io/repo-name/)
+        0  → deploying to a root domain (e.g. username.github.io or custom domain)
+
+      Source: https://github.com/rafgraph/spa-github-pages
+    -->
+    <script>
+      var segmentCount = 1;
+      var l = window.location;
+      l.replace(
+        l.protocol +
+          '//' +
+          l.hostname +
+          (l.port ? ':' + l.port : '') +
+          l.pathname
+            .split('/')
+            .slice(0, 1 + segmentCount)
+            .join('/') +
+          '/?/' +
+          l.pathname
+            .slice(1)
+            .split('/')
+            .slice(segmentCount)
+            .join('/')
+            .replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

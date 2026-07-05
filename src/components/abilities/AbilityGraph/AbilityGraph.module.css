@@ -1,0 +1,88 @@
+/* AbilityGraph — scoped styles */
+
+.graph {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  width: 100%;
+}
+
+/* ── Group ──────────────────────────────────────────────────────────────── */
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.groupLabel {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* ── Ability row ────────────────────────────────────────────────────────── */
+
+.abilityList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.abilityRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.highlighted .abilityName {
+  color: var(--color-text-primary);
+}
+
+.abilityName {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  width: 12rem;
+  flex-shrink: 0;
+}
+
+/* ── Bar mode ───────────────────────────────────────────────────────────── */
+
+.barTrack {
+  flex: 1;
+  height: 2px;
+  background-color: var(--color-border-subtle);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background-color: var(--color-accent-primary);
+  border-radius: var(--radius-full);
+  transform-origin: left center;
+}
+
+.highlighted .barFill {
+  background-color: var(--color-accent-highlight);
+}
+
+/* ── Grid mode ──────────────────────────────────────────────────────────── */
+
+.levelBadge {
+  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+  min-width: 2.5rem;
+  text-align: right;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .abilityName {
+    width: 8rem;
+  }
+}

@@ -1,0 +1,34 @@
+/* Projects scene — scoped styles */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+  padding: var(--space-4xl) var(--space-xl);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+  gap: var(--space-xl);
+}
+
+.error {
+  color: var(--color-state-error);
+  font-size: var(--text-sm);
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .container {
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}

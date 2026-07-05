@@ -1,0 +1,41 @@
+/* NavigationButton — scoped styles */
+
+.navButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast);
+}
+
+.navButton:hover {
+  color: var(--color-text-primary);
+}
+
+.active {
+  color: var(--color-text-primary);
+}
+
+.label {
+  display: inline-block;
+}
+
+/* Active indicator — position and style this when implementing the nav design */
+.indicator {
+  position: absolute;
+  /* Example: a bottom border. Adjust to match your nav layout. */
+  bottom: 0;
+  left: var(--space-sm);
+  right: var(--space-sm);
+  height: 1px;
+  background-color: var(--color-accent-primary);
+  border-radius: var(--radius-full);
+}

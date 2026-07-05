@@ -1,0 +1,14 @@
+/* SceneLayout — full-screen scene wrapper */
+
+.scene {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* Prevent transform artifacts from leaking outside the scene */
+  will-change: opacity, transform;
+  transform-origin: center center;
+}

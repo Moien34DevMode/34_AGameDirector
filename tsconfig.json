@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Strictness */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "exactOptionalPropertyTypes": false,
+
+    /* Path aliases — must mirror vite.config.ts resolve.alias */
+    "baseUrl": ".",
+    "paths": {
+      "@/*":            ["src/*"],
+      "@components/*":  ["src/components/*"],
+      "@scenes/*":      ["src/scenes/*"],
+      "@layouts/*":     ["src/layouts/*"],
+      "@data/*":        ["src/data/*"],
+      "@hooks/*":       ["src/hooks/*"],
+      "@utils/*":       ["src/utils/*"],
+      "@styles/*":      ["src/styles/*"],
+      "@theme/*":       ["src/theme/*"],
+      "@assets/*":      ["src/assets/*"],
+      "@services/*":    ["src/services/*"],
+      "@context/*":     ["src/context/*"],
+      "@router/*":      ["src/router/*"]
+    }
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

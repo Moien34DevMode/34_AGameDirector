@@ -1,0 +1,103 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   Utility classes — keep this file small and purposeful.
+   These are the only global classes that components are allowed to use.
+   All component-specific styling lives in CSS Modules.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Accessibility ────────────────────────────────────────────────────────── */
+
+/* Visually hidden but fully accessible to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Visible only when focused — for skip-navigation links */
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Global focus ring — applied via :focus-visible across the app */
+:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Layout helpers ───────────────────────────────────────────────────────── */
+
+.fill-screen {
+  width: 100%;
+  min-height: 100dvh;
+}
+
+.fill-parent {
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Flex helpers ─────────────────────────────────────────────────────────── */
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Text helpers ─────────────────────────────────────────────────────────── */
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* ── Interaction ──────────────────────────────────────────────────────────── */
+
+.pointer { cursor: pointer; }
+.not-allowed { cursor: not-allowed; }
+
+/* ── Animation helpers ────────────────────────────────────────────────────── */
+
+/* Respect the user's reduced-motion preference.
+   Framer Motion's useReducedMotion() hook handles this in JS;
+   this rule catches any CSS transitions that aren't managed by Framer. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

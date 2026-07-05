@@ -1,0 +1,23 @@
+/* LoadingOverlay — scoped styles */
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullScreen {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  background-color: var(--color-bg-primary);
+}
+
+.spinner {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--color-border-default);
+  border-top-color: var(--color-accent-primary);
+  border-radius: var(--radius-full);
+}

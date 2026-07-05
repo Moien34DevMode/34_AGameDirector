@@ -1,0 +1,50 @@
+/* Tooltip — scoped styles */
+
+.wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: var(--z-tooltip);
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  font-size: var(--text-xs);
+  font-family: var(--font-body);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-wide);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* ── Position variants ───────────────────────────────────────────────────── */
+
+.top {
+  bottom: calc(100% + var(--space-xs));
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom {
+  top: calc(100% + var(--space-xs));
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.left {
+  right: calc(100% + var(--space-xs));
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right {
+  left: calc(100% + var(--space-xs));
+  top: 50%;
+  transform: translateY(-50%);
+}

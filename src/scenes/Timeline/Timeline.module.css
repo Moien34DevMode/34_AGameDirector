@@ -1,0 +1,30 @@
+/* Timeline scene — scoped styles */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+  padding: var(--space-4xl) var(--space-xl);
+}
+
+.list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* The vertical line is drawn here as a pseudo-element when you implement the design */
+}
+
+.error {
+  color: var(--color-state-error);
+  font-size: var(--text-sm);
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .container {
+    padding: var(--space-2xl) var(--space-md);
+  }
+}

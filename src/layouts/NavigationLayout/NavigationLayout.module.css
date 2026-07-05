@@ -1,0 +1,42 @@
+/* NavigationLayout — persistent navigation shell.
+   Design the actual nav layout here.
+   The default below is a minimal top bar placeholder. */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-sticky);
+  /* Design the nav background, blur, border, etc. here */
+}
+
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  /* Adjust padding and max-width to match your layout */
+  padding: var(--space-md) var(--space-xl);
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+}
+
+.skipLink {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  padding: var(--space-xs) var(--space-md);
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  z-index: var(--z-tooltip);
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .navItems {
+    padding: var(--space-sm) var(--space-md);
+  }
+}
