@@ -16,7 +16,7 @@ import path from "path";
 export default defineConfig(({ mode }) => {
   const base =
     process.env.VITE_BASE_PATH ??
-    (mode === "production" ? "/agamedirector/" : "/");
+    (mode === "production" ? "/34_AGameDirector/" : "/");
 
   return {
     plugins: [react()],
