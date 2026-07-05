@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // GitHub Pages deployment
@@ -14,7 +14,9 @@ import path from 'path';
 //   VITE_BASE_PATH=/agamedirector/
 // ─────────────────────────────────────────────────────────────────────────────
 export default defineConfig(({ mode }) => {
-  const base = process.env.VITE_BASE_PATH ?? (mode === 'production' ? '/agamedirector/' : '/');
+  const base =
+    process.env.VITE_BASE_PATH ??
+    (mode === "production" ? "/agamedirector/" : "/");
 
   return {
     plugins: [react()],
@@ -23,19 +25,19 @@ export default defineConfig(({ mode }) => {
 
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, './src'),
-        '@components': path.resolve(__dirname, './src/components'),
-        '@scenes': path.resolve(__dirname, './src/scenes'),
-        '@layouts': path.resolve(__dirname, './src/layouts'),
-        '@data': path.resolve(__dirname, './src/data'),
-        '@hooks': path.resolve(__dirname, './src/hooks'),
-        '@utils': path.resolve(__dirname, './src/utils'),
-        '@styles': path.resolve(__dirname, './src/styles'),
-        '@theme': path.resolve(__dirname, './src/theme'),
-        '@assets': path.resolve(__dirname, './src/assets'),
-        '@services': path.resolve(__dirname, './src/services'),
-        '@context': path.resolve(__dirname, './src/context'),
-        '@router': path.resolve(__dirname, './src/router'),
+        "@": path.resolve(__dirname, "./src"),
+        "@components": path.resolve(__dirname, "./src/components"),
+        "@scenes": path.resolve(__dirname, "./src/scenes"),
+        "@layouts": path.resolve(__dirname, "./src/layouts"),
+        "@data": path.resolve(__dirname, "./src/data"),
+        "@hooks": path.resolve(__dirname, "./src/hooks"),
+        "@utils": path.resolve(__dirname, "./src/utils"),
+        "@styles": path.resolve(__dirname, "./src/styles"),
+        "@theme": path.resolve(__dirname, "./src/theme"),
+        "@assets": path.resolve(__dirname, "./src/assets"),
+        "@services": path.resolve(__dirname, "./src/services"),
+        "@context": path.resolve(__dirname, "./src/context"),
+        "@router": path.resolve(__dirname, "./src/router"),
       },
     },
 
@@ -49,10 +51,10 @@ export default defineConfig(({ mode }) => {
         output: {
           // Manual chunk strategy: keep vendor libraries separate from app code
           manualChunks: {
-            'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-            'vendor-motion': ['framer-motion'],
-            'vendor-markdown': ['react-markdown', 'remark-gfm'],
-            'vendor-icons': ['react-icons'],
+            "vendor-react": ["react", "react-dom", "react-router-dom"],
+            "vendor-motion": ["framer-motion"],
+            "vendor-markdown": ["react-markdown", "remark-gfm"],
+            "vendor-icons": ["react-icons"],
           },
         },
       },
